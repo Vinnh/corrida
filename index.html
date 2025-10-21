@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <section class="modal habilitar" id="modal">
+        <!-- habilitar -->
+        <section class="modal-login active" id="modalLogin">
+            <!-- active -->
+            <h1 class="titulo"><span>Pronto</span> <span>para</span> <span
+                    >um</span> <span>novo</span> <span>desafio?</span></h1>
+
+            <button class="btn-modal btn-start btn-red-tr" id="btnStart">Iniciar Jogo!</button>
+
+            <p class="regras">Use a tecla <span>"Arrow UP"</span>, <span>"Arrow
+                    Down"</span> ou <span>"Space"</span> do teclado para mover o Mario no jogo.</p>
+
+            <img src="imagens/mario3.png" class="img-mario img-mario3">
+
+        </section>
+
+        <section class="modal-game-over" id="modalGameOver">
+            <!-- active -->
+            <h1 class="titulo"><span>Que</span> <span>pena,</span> <span
+                   >Voce</span> <span>perdeu!</span></h1>
+            <img src="imagens/background2.png" class="img-game-over">
+
+            <div class="wrapper-btn">
+                <button class="btn-modal btn-red-tr btn-ranking" id="btnRanking">Jogue Novamente</button>
+            </div>
+        </section>
+
+
+    </section>
+
+            <header class="header">
+            <div class="wrapper-topo">
+                <div class="coluna-jogo">
+                    <div class="coluna-pontuação">
+                    <span class="titulo">pontuação</span>
+                    <p class="pontuacao" id="txtpontos">0</p>
+                    </div>
+
+                </div>
+                <div class="coluna">
+                    <img class="img-logo" src="imagens/logo.png" alt="">
+                </div>
+                <div class="coluna">
+                    <span class="titulo">vidas</span>
+                    <div class="coluna-vidas">
+                        <img class="vidaimg" id="vidaimg" src="imagens/vida.png" alt="">
+                        <p class="vidas" id="vidas">3</p>
+                    </div>
+                </div>
+                
+
+            </div>
+        </header>
+    <div class="game-board">
+        <img id="bonus" src="imagens/bonus.png" alt="bonus" />
+        <img src="imagens/build.png" class="build">
+        <img src="imagens/clouds.png" class="clouds">
+        <img src="imagens/mario.gif" class="mario" alt="">
+        <img src="imagens/pipe.gif" class="pipe" alt="">
+        <img id="moeda" src="imagens/moeda.png" alt="">
+
+
+    </div>
+
+      <div id="popup">
+    <div class="popup-content">
+        <h2>Verdadeiro ou Falso</h2>
+      <p id="meuParagrafo">pergunta aqui</p>
+      <button class="btn-v" id="close-popup-v">Verdadeiro</button>
+      <button class="btn-f" id="close-popup-f">Falso</button>      
+    </div>
+  </div>
+</body>
+</html>
