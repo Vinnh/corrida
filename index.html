@@ -6,6 +6,7 @@
     <title>jogo</title>
     
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="js/script.js" defer></script>
 </head>
@@ -20,8 +21,7 @@
 
             <button class="btn-modal btn-start btn-red-tr" id="btnStart">Iniciar Jogo!</button>
 
-            <p class="regras">Use a tecla <span>"Arrow UP"</span>, <span>"Arrow
-                    Down"</span> ou <span>"Space"</span> do teclado para mover o Mario no jogo.</p>
+            <p class="regras">Ajude o <span>corredor</span> a escapar dos vírus pulando com a <span>tecla espaço</span>. Durante o caminho, <span>colete camisinhas</span> e <span>laços vermelhos</span> para responder perguntas de verdadeiro ou falso. Você tem <span>três vidas</span> — cada resposta errada faz você perder uma!</p>
 
             <img src="imagens/mario3.png" class="img-mario img-mario3">
 
@@ -38,9 +38,17 @@
             </div>
         </section>
 
+        <section class="modal-win" id="modalWin">
+            <!-- active -->
+            <h1 class="titulo">Você ganhou:</h1>
+            <h1 class="titulo"><span>0</span> pontos</h1>
+            <img src="imagens/background3.png" class="img-game-over">
+        </section>
+
 
     </section>
 
+    <div class="game-board">
             <header class="header">
             <div class="wrapper-topo">
                 <div class="coluna-jogo">
@@ -64,13 +72,14 @@
 
             </div>
         </header>
-    <div class="game-board">
         <img id="bonus" src="imagens/bonus.png" alt="bonus" />
         <img src="imagens/build.png" class="build">
         <img src="imagens/clouds.png" class="clouds">
         <img src="imagens/mario.gif" class="mario" alt="">
         <img src="imagens/pipe.gif" class="pipe" alt="">
-        <img id="moeda" src="imagens/moeda.png" alt="">
+        <img class="img-moeda" id="moeda" src="imagens/moeda.png" alt="">
+        <!-- <img class="img-moeda img-moeda2" id="moeda" src="imagens/moeda.png" alt="">
+        <img class="img-moeda img-moeda3" id="moeda" src="imagens/moeda.png" alt=""> -->
 
 
     </div>

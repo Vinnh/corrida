@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'mario';
+  font-family: 'Poppins', sans-serif;
 }
 
 @font-face {
@@ -40,8 +40,16 @@
     animation: bonus-animation 3.5s infinite linear;
 }
 
-.game-board.start #moeda{
-    animation: moeda-animation 2.5s infinite linear;
+.game-board.start .img-moeda {
+  animation: moeda-animation 2.5s infinite linear;
+}
+
+.game-board.start .img-moeda2 {
+  animation: moeda-animation 2.5s infinite linear .5s;
+}
+
+.game-board.start .img-moeda3 {
+  animation: moeda-animation 2.5s infinite linear 1s;
 }
 
 .pipe {
@@ -58,7 +66,7 @@
 }
 
 .jump {
-    animation: jump 500ms ease-out;
+    animation: jump 650ms ease-out;
 }
 
 #bonus {
@@ -75,13 +83,20 @@
     right: -50px;
 }
 
+#modal .regras span {
+  font-weight: 700;
+
+}
+
 #popup {
+  width: 100%;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
   display: none; /* oculto até ser ativado */
   justify-content: center;
   align-items: center;
+  z-index: 2;
   
 }
 
@@ -90,8 +105,8 @@
   padding: 0 30px 30px;
   border-radius: 10px;
   text-align: center;
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
   background: #fff;
   position: absolute;
   top: 50%;
@@ -137,6 +152,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 1; /* camada inferior */
 }
 
 .wrapper-topo {
@@ -188,7 +204,7 @@
     }
 
     .img-logo {
-        width: 20%;
+        width: 40%;
         position: absolute;
         left: 0;
         right: 0;
@@ -367,15 +383,51 @@
   width: 300px;
 }
 
+.modal .modal-win .img-game-over {
+  width: 300px;
+}
+
 .modal .modal-game-over .wrapper-btn {
   display: flex;
   gap: 30px;
 }
 
+.modal .modal-win {
+  width: 650px;
+  min-height: 400px;
+  max-height: 500px;
+  background-image: linear-gradient(#164561, #0b3b69);
+  box-shadow: 2px 2px 20px #13b82f;
+  padding: 50px;
+  border-radius: 30px;
+  display: none;
+}
+
+.modal .modal-win.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-up 1s forwards;
+}
+
+.modal .modal-win .img-win {
+  width: 300px;
+}
+
+.modal .modal-win .wrapper-btn {
+  display: flex;
+  gap: 30px;
+}
+
+
+
+
+
 .modal .btn-modal {
   background: none;
   border: none;
-  width: 350px;
+  width: 400px;
   height: 70px;
   position: relative;
   display: flex;
@@ -419,7 +471,7 @@
 }
 
 .modal .btn-ranking, .modal .btn-reiniciar {
-  width: 200px;
+  width: 300px;
   height: 50px;
   font-size: 25px;
 }
@@ -427,9 +479,10 @@
 .modal .titulo {
   font-size: 36px;
   text-align: center;
+  font-weight: 700;
   margin: 20px 0px;
-  color: #ff0000;
-  -webkit-text-stroke: 3px #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #000000;
 }
 
 .modal .img-mario {
